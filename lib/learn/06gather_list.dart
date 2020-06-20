@@ -39,6 +39,7 @@
 *
 * */
 
+
 void main() {
   /* var mylist=['香蕉','苹果','橘子'];
   print(mylist[1]);
@@ -66,7 +67,7 @@ void main() {
 
   var newMylist = mylist.reversed.toList();
   print(newMylist);*/
- /* mylist.fillRange(1, 2, '哈密瓜');
+  /* mylist.fillRange(1, 2, '哈密瓜');
   print(mylist);
   mylist.fillRange(1, 3, 'aaa');
   print(mylist);
@@ -75,7 +76,7 @@ void main() {
 
   print(mylist);*/
 
- /* var str=mylist.join(',');
+  /* var str=mylist.join(',');
   print(str);
   print(str is String);*/
 
@@ -93,12 +94,73 @@ var s=new Set();
  print(s);
  print(s.toList());
 */
-  var mylist = ['香蕉', '苹果', '橘子','香蕉', '苹果','香蕉', '苹果'];
+  /*var mylist = ['香蕉', '苹果', '橘子','香蕉', '苹果','香蕉', '苹果'];
    print(mylist);
   var s=new Set();
   s.addAll(mylist);
   print(s);
-  print(s.toList());
+  print(s.toList());*/
+//  var mylist=['香蕉','苹果','橘子'];
+  /* for(int i=0;i<mylist.length;i++){
+    print(mylist[i]);
+  }*/
+  /*for(var item in mylist){
+   print(item);
+ }*/
+/* mylist.forEach((element) {
+   print(element);
+ });*/
+//  List mylist = [1, 3, 4];
+//  List newlist = new List();
+
+//  for (int i = 0; i < mylist.length; i++) {
+//    newlist.add(mylist[i] * 2);
+//  }
+//  print(newlist);
 
 
+//  List mylist = [1, 3, 4];
+//  var newlist=mylist.map((value){
+//    return value*3;
+//  });
+// print(newlist);
+// print(newlist.toList());
+
+//  List mylist = [1, 3, 4,5,7,8,9];
+//  var newlist=mylist.where((value) {
+//    return value>5;
+//  });
+// print(newlist);
+// print(newlist.toList());
+
+
+/*  List mylist = [1, 3, 4,5,7,8,9];
+  var f=mylist.any((value){ //只要集合中有满足条件的就返回true
+    return value>5;
+  });
+  print(f);*/
+  List mylist = [1, 3, 4,5,7,8,9];
+  var f=mylist.every((value){ //每一个都满足条件的就返回true  否则返回false
+    return value>5;
+  });
+  print(f);
+
+  // set
+
+/*  var set=new Set();
+
+  set.addAll([1,22,333,4444]);
+  set.forEach((element) {
+    print(element);
+  });*/
+  Map person={
+    'name':'张三',
+    'age':22,
+    'sex':'男'
+  };
+  person.forEach((key, value) {
+    print('====key====$key');
+    print('====value====$value');
+
+  });
 }
