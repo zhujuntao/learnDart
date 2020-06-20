@@ -111,6 +111,7 @@ void main() {
 
   //定义 知道类型
 
+
   var l3 = new List<String>();
   l3.add("11111");
   //l3.add(123);//定义指定类型
