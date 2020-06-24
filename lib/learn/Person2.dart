@@ -20,6 +20,6 @@ class Person{
   }
 
   void printInfo() {
-    print("${this.name}--Person1---${this.age}");
+    print("${this.name}---Person2--${this.age}");
   }
 }
