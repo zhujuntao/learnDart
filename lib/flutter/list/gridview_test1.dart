@@ -15,7 +15,8 @@ class MyListApp extends StatelessWidget {
             title: Text('Flutter demo'),
             centerTitle: true,
           ),
-          body: HomeContent()),
+//          body: HomeContent()),
+          body: GridHomeContent()),
     );
   }
 }
@@ -114,6 +115,40 @@ class GridHomeContent extends StatelessWidget {
         ));
   }
 
+  //层叠样式
+  Widget _getGridStackList(context, index) {
+    return Container(
+        height: 100.0,
+        width: 100.0,
+//          color: Colors.cyan,
+        decoration: BoxDecoration(
+            color: Colors.cyan,
+            border: Border.all(width: 1, color: Colors.cyan),
+            borderRadius: BorderRadius.circular(5.0)),
+        child: Stack(
+          children: <Widget>[
+            Container(
+              child: Image.network(
+                listData[index]['imageUrl'],
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+
+            //利用 SizedBox 来撑开 设置图片和文案间距
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                listData[index]['title'],
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16.0),
+              ),
+            ),
+          ],
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -130,12 +165,13 @@ class GridHomeContent extends StatelessWidget {
       padding: EdgeInsets.all(10.0),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         //控制布局
-        crossAxisCount: 2,
+        crossAxisCount: 3,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
       itemCount: listData.length,
-      itemBuilder: this._getGridConList,
+//      itemBuilder: this._getGridConList,
+      itemBuilder: this._getGridStackList,
     );
   }
 }
