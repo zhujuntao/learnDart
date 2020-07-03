@@ -14,9 +14,3 @@ class Myapp extends StatelessWidget {
   }
 }
 
-/*
-*
-* flutter 中路由通俗讲就是页面跳转
-*
-*
-* */
