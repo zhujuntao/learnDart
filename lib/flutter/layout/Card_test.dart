@@ -92,7 +92,7 @@ class CardLayoutTest extends StatelessWidget {
           margin: EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              AspectRatio(
+              AspectRatio( //设置子控件的宽高比占父元素的多少
                 aspectRatio: 20 / 9,
                 child: Image.network(
                   'https://www.itying.com/images/flutter/1.png',
