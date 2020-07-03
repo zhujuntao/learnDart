@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {
+  final arguments;
+  SearchPage({this.arguments});
   @override
   _SearchPageState createState() => _SearchPageState();
 }

@@ -35,8 +35,11 @@ class _HomePageState extends State<HomePage> {
               //Navigator.push：是跳转到下一个页面，它要接受两个参数一个是上下文context，另一个是要跳转的函数。
               /* Navigator.push(context,
                   MaterialPageRoute(builder: (context) => new SecondScreen()));*/
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => SearchPage()));
+              /*Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => SearchPage()));*/
+              //命名路由跳转
+//              Navigator.pushNamed(context, '/search');
+              Navigator.pushNamed(context, '/form', arguments: {'id': 123456});
             },
             color: Colors.cyan,
             textColor: Colors.yellow,
@@ -45,7 +48,28 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 20,
           ),
+          RaisedButton(
+            child: Text('跳转到商品页面'),
+            onPressed: () {
+              //child：可以放入容器，图标，文字。让你构建多彩的按钮。
+              //onPressed：点击事件的相应，一般会调用Navigator组件。
 
+              //Navigator.push：是跳转到下一个页面，它要接受两个参数一个是上下文context，另一个是要跳转的函数。
+              /* Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => new SecondScreen()));*/
+              /*Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => SearchPage()));*/
+              //命名路由跳转
+//              Navigator.pushNamed(context, '/search');
+              Navigator.pushNamed(context, '/product' /*arguments: {'id': 123456}*/);
+            },
+            color: Colors.green,
+            textColor: Colors.yellow,
+            textTheme: ButtonTextTheme.primary,
+          ),
+          SizedBox(
+            height: 30,
+          ),
         ],
       ),
     );
