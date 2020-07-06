@@ -50,7 +50,6 @@ class _CategoryPageState extends State<CategoryPage> {
                     * indicatorSize: TabBarIndicatorSize.tab 给每个tab等宽 label 跟文字等宽,
                     * labelColor: 选中颜色,
                     *
-                    *
                     * */
                     indicatorColor: Colors.pink,
                     labelColor: Colors.red,
