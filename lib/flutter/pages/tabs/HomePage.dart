@@ -61,7 +61,8 @@ class _HomePageState extends State<HomePage> {
                   .push(MaterialPageRoute(builder: (context) => SearchPage()));*/
               //命名路由跳转
 //              Navigator.pushNamed(context, '/search');
-              Navigator.pushNamed(context, '/product' /*arguments: {'id': 123456}*/);
+              Navigator.pushNamed(
+                  context, '/product' /*arguments: {'id': 123456}*/);
             },
             color: Colors.green,
             textColor: Colors.yellow,
@@ -69,6 +70,32 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(
             height: 30,
+          ),
+          RaisedButton(
+            child: Text('跳转到AppBarDemo页面'),
+            onPressed: () {
+              //Navigator.push：是跳转到下一个页面，它要接受两个参数一个是上下文context，另一个是要跳转的函数。
+              //命名路由跳转
+//              Navigator.pushNamed(context, '/search');
+              Navigator.pushNamed(
+                  context, '/appbarDemoPage' /*arguments: {'id': 123456}*/);
+            },
+            color: Colors.deepOrange,
+            textColor: Colors.yellow,
+            textTheme: ButtonTextTheme.primary,
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          RaisedButton(
+            child: Text('跳转到TabBarControllerDemo页面'),
+            onPressed: () {
+              Navigator.pushNamed(context,
+                  '/tabbarControllerPage' /*arguments: {'id': 123456}*/);
+            },
+            color: Colors.deepOrangeAccent,
+            textColor: Colors.yellow,
+            textTheme: ButtonTextTheme.primary,
           ),
         ],
       ),

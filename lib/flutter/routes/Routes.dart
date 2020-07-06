@@ -2,6 +2,8 @@ import 'package:flutterapp/flutter/pages/FormPage.dart';
 import 'package:flutterapp/flutter/pages/ProductInfoPage.dart';
 import 'package:flutterapp/flutter/pages/ProductPage.dart';
 import 'package:flutterapp/flutter/pages/SearchPage.dart';
+import 'package:flutterapp/flutter/pages/appbar/AppBarDemo.dart';
+import 'package:flutterapp/flutter/pages/appbar/TabBarControllerPage.dart';
 import 'package:flutterapp/flutter/pages/tabs/Tabs.dart';
 import 'package:flutterapp/flutter/user/LoginToUser.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +22,8 @@ final routes = {
   '/registerFirst': (context) => RegisterFirst(),
   '/registerSecond': (context) => RegisterSecond(),
   '/registerThird': (context) => RegisterThirdPage(),
+  '/appbarDemoPage': (context) => AppBarDemoPage(),
+  '/tabbarControllerPage': (context) => TabBarControllerPage(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
