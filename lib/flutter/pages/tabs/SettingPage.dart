@@ -20,6 +20,16 @@ class _SettingPageState extends State<SettingPage> {
           ),
           ListTile(
             title: Text('我是3个文本组件'),
+          ),
+          Column(
+            children: <Widget>[
+              RaisedButton(child: Text('跳转到登录页面'), onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              }),
+              RaisedButton(child: Text('跳转到注册页面'), onPressed: () {
+                Navigator.pushNamed(context, '/registerFirst');
+              }),
+            ],
           )
         ],
       ),

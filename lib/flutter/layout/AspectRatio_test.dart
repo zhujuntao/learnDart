@@ -23,7 +23,7 @@ class LayoutDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
 //      width: 200.0,
-      child: AspectRatio(
+      child: AspectRatio(//根据设置调整子元素child的宽高比
         aspectRatio: 2.0 / 1.0,
         child: Container(
           color: Colors.red,

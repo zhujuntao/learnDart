@@ -3,7 +3,11 @@ import 'package:flutterapp/flutter/pages/ProductInfoPage.dart';
 import 'package:flutterapp/flutter/pages/ProductPage.dart';
 import 'package:flutterapp/flutter/pages/SearchPage.dart';
 import 'package:flutterapp/flutter/pages/tabs/Tabs.dart';
+import 'package:flutterapp/flutter/user/LoginToUser.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/flutter/user/RegisterFirst.dart';
+import 'package:flutterapp/flutter/user/RegisterSecond.dart';
+import 'package:flutterapp/flutter/user/RegisterThird.dart';
 
 //配置路由
 final routes = {
@@ -12,6 +16,10 @@ final routes = {
   '/product': (context, {arguments}) => ProductPage(/*arguments: arguments*/),
   '/productinfo': (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
+  '/login': (context) => LoginPage(),
+  '/registerFirst': (context) => RegisterFirst(),
+  '/registerSecond': (context) => RegisterSecond(),
+  '/registerThird': (context) => RegisterThirdPage(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 

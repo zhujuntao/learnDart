@@ -4,12 +4,21 @@ import 'package:flutterapp/flutter/pages/tabs/HomePage.dart';
 import 'package:flutterapp/flutter/pages/tabs/SettingPage.dart';
 
 class Tabs extends StatefulWidget {
+  final index;
+
+  Tabs({this.index = 0});
+
   @override
-  _TabsState createState() => _TabsState();
+  _TabsState createState() => _TabsState(this.index);
 }
 
 class _TabsState extends State<Tabs> {
   int _currentIndex = 0;
+
+  _TabsState(int index) {
+    this._currentIndex = index;
+  }
+
   List _pageList = [HomePage(), CategoryPage(), SettingPage()];
 
   @override
