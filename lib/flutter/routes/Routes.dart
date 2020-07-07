@@ -2,6 +2,7 @@ import 'package:flutterapp/flutter/pages/FormPage.dart';
 import 'package:flutterapp/flutter/pages/ProductInfoPage.dart';
 import 'package:flutterapp/flutter/pages/ProductPage.dart';
 import 'package:flutterapp/flutter/pages/SearchPage.dart';
+import 'package:flutterapp/flutter/pages/UserInfoPage.dart';
 import 'package:flutterapp/flutter/pages/appbar/AppBarDemo.dart';
 import 'package:flutterapp/flutter/pages/appbar/TabBarControllerPage.dart';
 import 'package:flutterapp/flutter/pages/tabs/Tabs.dart';
@@ -24,6 +25,7 @@ final routes = {
   '/registerThird': (context) => RegisterThirdPage(),
   '/appbarDemoPage': (context) => AppBarDemoPage(),
   '/tabbarControllerPage': (context) => TabBarControllerPage(),
+  '/userInfoPage': (context) => UserInfoPage(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 

@@ -52,6 +52,95 @@ class _TabsState extends State<Tabs> {
               icon: Icon(Icons.settings), title: Text('设置')),
         ],
       ),
+      //侧边栏
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            //头部布局
+            Row(
+              children: <Widget>[
+                Expanded(
+                    child: DrawerHeader(
+                  child: Text('你好flutter'),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              'https://www.itying.com/images/flutter/2.png'),
+                          fit: BoxFit.cover)
+//                    color: Colors.yellow,
+
+                      ),
+                )),
+              ],
+            ),
+
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text('我的空间'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.people),
+              ),
+              title: Text('用户中心'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/userInfoPage');
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text('设置中心'),
+            ),
+            Divider(),
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(
+                    child: UserAccountsDrawerHeader(
+                  accountName: Text('张三'),
+                  accountEmail: Text('xxxx@qq.com'),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://www.itying.com/images/flutter/3.png'),
+                  ),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                    image: NetworkImage(
+                        'https://www.itying.com/images/flutter/2.png'),
+                    fit: BoxFit.cover,
+                  )),
+                  otherAccountsPictures: <Widget>[
+                    Image.network(
+                        'https://www.itying.com/images/flutter/3.png'),
+                    Image.network(
+                        'https://www.itying.com/images/flutter/4.png'),
+                  ],
+                ))
+              ],
+            ),
+            Text('右边侧边栏'),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text('设置中心'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
