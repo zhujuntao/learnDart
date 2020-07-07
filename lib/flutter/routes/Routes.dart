@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/flutter/user/RegisterFirst.dart';
 import 'package:flutterapp/flutter/user/RegisterSecond.dart';
 import 'package:flutterapp/flutter/user/RegisterThird.dart';
+import 'package:flutterapp/flutter/widget/button/RaiseButtonUse.dart';
 
 //配置路由
 final routes = {
@@ -26,6 +27,7 @@ final routes = {
   '/appbarDemoPage': (context) => AppBarDemoPage(),
   '/tabbarControllerPage': (context) => TabBarControllerPage(),
   '/userInfoPage': (context) => UserInfoPage(),
+  '/raiseButtonDemoPage': (context) => RaiseButtonDemoPage(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
