@@ -27,6 +27,29 @@ class _TabsState extends State<Tabs> {
       appBar: AppBar(
         title: Text('this is a demo'),
       ),
+      floatingActionButton: Container(
+        width: 80,
+        height: 80,
+        padding: EdgeInsets.all(8),
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(40),
+        ),
+        child: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            print('FloatingActionButton ');
+            setState(() {
+              //改变状态
+              this._currentIndex = 1;
+            });
+          },
+          backgroundColor:
+              this._currentIndex == 1 ? Colors.redAccent : Colors.amber,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         //配置对应的索引值选中

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 /*
@@ -25,6 +24,19 @@ class RaiseButtonDemoPage extends StatelessWidget {
           IconButton(icon: Icon(Icons.settings), onPressed: () {})
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        //子视图，一般为Icon
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
+          size: 40,
+        ),
+        onPressed: () {
+          print('FloatingActionButton');
+        },
+        backgroundColor: Colors.amber,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -98,16 +110,16 @@ class RaiseButtonDemoPage extends StatelessWidget {
             children: <Widget>[
               Expanded(
                   child: Container(
-                    margin: EdgeInsets.all(10),
-                    height: 60,
-                    child: RaisedButton(
-                        child: Text('自适应按钮'),
-                        textColor: Colors.green,
-                        color: Colors.amber,
-                        onPressed: () {
-                          print('自适应按钮');
-                        }),
-                  ))
+                margin: EdgeInsets.all(10),
+                height: 60,
+                child: RaisedButton(
+                    child: Text('自适应按钮'),
+                    textColor: Colors.green,
+                    color: Colors.amber,
+                    onPressed: () {
+                      print('自适应按钮');
+                    }),
+              ))
             ],
           ),
           SizedBox(
@@ -177,15 +189,15 @@ class RaiseButtonDemoPage extends StatelessWidget {
               ),
               Expanded(
                   child: Container(
-                    margin: EdgeInsets.all(10),
-                    height: 50,
-                    child: OutlineButton(
-                      onPressed: () {},
+                margin: EdgeInsets.all(10),
+                height: 50,
+                child: OutlineButton(
+                  onPressed: () {},
 //              color: Colors.red,
 //              textColor: Colors.amber,
-                      child: Text('注销'),
-                    ),
-                  ))
+                  child: Text('注销'),
+                ),
+              ))
             ],
           ),
           Row(
@@ -211,7 +223,9 @@ class RaiseButtonDemoPage extends StatelessWidget {
                       onPressed: () {
                         print('圆角按钮');
                       }),
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   CoustomRaiseButton(
                     text: '自定义按钮',
                     textColors: Colors.blue,
@@ -219,7 +233,8 @@ class RaiseButtonDemoPage extends StatelessWidget {
                     height: 50.0,
                     pressed: () {
                       print('自定义按钮');
-                    },),
+                    },
+                  ),
                 ],
               ),
             ],
@@ -237,12 +252,13 @@ class CoustomRaiseButton extends StatelessWidget {
   final text;
   final textColors;
 
-  const CoustomRaiseButton({Key key,
-    this.text,
-    this.textColors,
-    this.height = 30.0,
-    this.width = 80.0,
-    this.pressed})
+  const CoustomRaiseButton(
+      {Key key,
+      this.text,
+      this.textColors,
+      this.height = 30.0,
+      this.width = 80.0,
+      this.pressed})
       : super(key: key);
 
   @override
