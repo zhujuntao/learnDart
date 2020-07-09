@@ -6,6 +6,9 @@ import 'package:flutterapp/flutter/pages/UserInfoPage.dart';
 import 'package:flutterapp/flutter/pages/appbar/AppBarDemo.dart';
 import 'package:flutterapp/flutter/pages/appbar/TabBarControllerPage.dart';
 import 'package:flutterapp/flutter/pages/tabs/Tabs.dart';
+import 'package:flutterapp/flutter/pages/textfield/FormTextPageDemo.dart';
+import 'package:flutterapp/flutter/pages/textfield/RadioPageDemo.dart';
+import 'package:flutterapp/flutter/pages/textfield/TextFieldPageDemo.dart';
 import 'package:flutterapp/flutter/user/LoginToUser.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/flutter/user/RegisterFirst.dart';
@@ -28,6 +31,9 @@ final routes = {
   '/tabbarControllerPage': (context) => TabBarControllerPage(),
   '/userInfoPage': (context) => UserInfoPage(),
   '/raiseButtonDemoPage': (context) => RaiseButtonDemoPage(),
+  '/textFieldDemoPage': (context) => TextFieldPageDemo(),
+  '/radioPageDemo': (context) => RadioPageDemo(),
+  '/formTextPageDemo': (context) => FormTextPageDemo(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
