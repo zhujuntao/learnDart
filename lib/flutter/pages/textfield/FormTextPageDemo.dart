@@ -9,7 +9,7 @@ class _FormTextPageDemoState extends State<FormTextPageDemo> {
   String username;
   String info;
   int sex;
-
+  //创建数组
   List hobby = [
     {'checked': true, 'title': '吃饭'},
     {'checked': false, 'title': '睡觉'},
