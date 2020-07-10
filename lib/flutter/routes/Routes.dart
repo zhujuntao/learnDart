@@ -1,3 +1,5 @@
+import 'package:flutterapp/flutter/pages/DatePickerPage.dart';
+import 'package:flutterapp/flutter/pages/DatePickerTestDemo.dart';
 import 'package:flutterapp/flutter/pages/FormPage.dart';
 import 'package:flutterapp/flutter/pages/ProductInfoPage.dart';
 import 'package:flutterapp/flutter/pages/ProductPage.dart';
@@ -34,6 +36,8 @@ final routes = {
   '/textFieldDemoPage': (context) => TextFieldPageDemo(),
   '/radioPageDemo': (context) => RadioPageDemo(),
   '/formTextPageDemo': (context) => FormTextPageDemo(),
+  '/datePickerTestDemo': (context) => DatePickerTestDemo(),
+  '/datePickerPage': (context) => DatePickerPage(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
