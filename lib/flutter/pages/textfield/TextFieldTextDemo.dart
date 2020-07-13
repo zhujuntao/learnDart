@@ -40,7 +40,8 @@ class MyApp extends StatelessWidget {
 //      initialRoute: '/radioPageDemo',
 //      initialRoute: '/formTextPageDemo',
 //      initialRoute: '/datePickerTestDemo',
-      initialRoute: '/datePickerPage',
+//      initialRoute: '/datePickerPage',
+      initialRoute: '/swiperTest',
       onGenerateRoute: onMyGenerateRoute,
     );
   }

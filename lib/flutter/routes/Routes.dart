@@ -4,6 +4,7 @@ import 'package:flutterapp/flutter/pages/FormPage.dart';
 import 'package:flutterapp/flutter/pages/ProductInfoPage.dart';
 import 'package:flutterapp/flutter/pages/ProductPage.dart';
 import 'package:flutterapp/flutter/pages/SearchPage.dart';
+import 'package:flutterapp/flutter/pages/SwiperTest.dart';
 import 'package:flutterapp/flutter/pages/UserInfoPage.dart';
 import 'package:flutterapp/flutter/pages/appbar/AppBarDemo.dart';
 import 'package:flutterapp/flutter/pages/appbar/TabBarControllerPage.dart';
@@ -38,6 +39,7 @@ final routes = {
   '/formTextPageDemo': (context) => FormTextPageDemo(),
   '/datePickerTestDemo': (context) => DatePickerTestDemo(),
   '/datePickerPage': (context) => DatePickerPage(),
+  '/swiperTest': (context) => SwiperTest(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
