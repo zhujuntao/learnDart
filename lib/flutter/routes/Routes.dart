@@ -1,6 +1,7 @@
 import 'package:flutterapp/flutter/pages/DatePickerPage.dart';
 import 'package:flutterapp/flutter/pages/DatePickerTestDemo.dart';
 import 'package:flutterapp/flutter/pages/FormPage.dart';
+import 'package:flutterapp/flutter/pages/HttpTest.dart';
 import 'package:flutterapp/flutter/pages/ProductInfoPage.dart';
 import 'package:flutterapp/flutter/pages/ProductPage.dart';
 import 'package:flutterapp/flutter/pages/SearchPage.dart';
@@ -8,6 +9,7 @@ import 'package:flutterapp/flutter/pages/SwiperTest.dart';
 import 'package:flutterapp/flutter/pages/UserInfoPage.dart';
 import 'package:flutterapp/flutter/pages/appbar/AppBarDemo.dart';
 import 'package:flutterapp/flutter/pages/appbar/TabBarControllerPage.dart';
+import 'package:flutterapp/flutter/pages/dialog/DialogPage.dart';
 import 'package:flutterapp/flutter/pages/tabs/Tabs.dart';
 import 'package:flutterapp/flutter/pages/textfield/FormTextPageDemo.dart';
 import 'package:flutterapp/flutter/pages/textfield/RadioPageDemo.dart';
@@ -40,6 +42,8 @@ final routes = {
   '/datePickerTestDemo': (context) => DatePickerTestDemo(),
   '/datePickerPage': (context) => DatePickerPage(),
   '/swiperTest': (context) => SwiperTest(),
+  '/dialogPage': (context) => DialogPage(),
+  '/httpTest': (context) => HttpTest(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
