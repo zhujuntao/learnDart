@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:dio/dio.dart';
 
+import 'package:flutterapp/config/httpHeaders.dart';
+
 class DioHttpTest extends StatefulWidget {
   @override
   _DioHttpTestState createState() => _DioHttpTestState();
@@ -10,16 +12,18 @@ class DioHttpTest extends StatefulWidget {
 class _DioHttpTestState extends State<DioHttpTest> {
   TextEditingController typeController = TextEditingController();
   String showText = '欢迎你来到美好人间';
+  String showStr = '还没有数据。。。';
 
   @override
   Widget build(BuildContext context) {
+    getData();
     return Container(
       child: Scaffold(
         appBar: AppBar(
           title: Text('美好人间'),
         ),
-        body:SingleChildScrollView(
-          child:  Container(
+        body: SingleChildScrollView(
+          child: Container(
             child: Column(
               children: <Widget>[
                 TextField(
@@ -84,6 +88,29 @@ class _DioHttpTestState extends State<DioHttpTest> {
       response = await Dio().get(
           "https://www.easy-mock.com/mock/5c60131a4bed3a6342711498/baixing/dabaojian",
           queryParameters: data);
+      return response.data;
+    } catch (e) {
+      return print(e);
+    }
+  }
+
+  void _jike() {
+    print('----开始请求极客学院数据---');
+    getData().then((value) {
+      setState(() {
+        showStr = value;
+      });
+    });
+  }
+
+  Future getData() async {
+    try {
+      Response response;
+      Dio dio = new Dio();
+      dio.options.headers = httpHeaders;
+      response =
+          await dio.get('https://time.geekbang.org/serv/v1/column/newAll');
+      print(response);
       return response.data;
     } catch (e) {
       return print(e);
