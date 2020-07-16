@@ -44,7 +44,8 @@ class MyApp extends StatelessWidget {
 //      initialRoute: '/swiperTest',
 //      initialRoute: '/dialogPage',
 //      initialRoute: '/httpTest',
-      initialRoute: '/dioTest',
+//      initialRoute: '/dioTest',
+      initialRoute: '/dioHttpTest',
       onGenerateRoute: onMyGenerateRoute,
     );
   }

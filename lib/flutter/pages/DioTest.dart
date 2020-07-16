@@ -29,6 +29,20 @@ class _DioTestState extends State<DioTest> {
    print('----'+user['name']);*/
   }
 
+  void getHttp() async {
+    try {
+      Response response;
+      var data = {'name': '技术胖'};
+      response = await Dio().get(
+          "https://www.easy-mock.com/mock/5c60131a4bed3a6342711498/baixing/dabaojian?name=大胸美女"
+          //  queryParameters:data
+          );
+      return print(response);
+    } catch (e) {
+      return print(e);
+    }
+  }
+
   _getDataInfo() async {
     /*  var url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
 
@@ -53,7 +67,7 @@ class _DioTestState extends State<DioTest> {
       print('----${result.statusCode}---失败');
     }
     */
-   /* var dio = Dio();
+    /* var dio = Dio();
 //    Response response = await dio.get('https://google.com');
     Response response = await dio.get('http://a.itying.com/api/productlist');
     if (response.statusCode == 200) {
@@ -65,18 +79,15 @@ class _DioTestState extends State<DioTest> {
       print('----${response.statusCode}---失败');
     }*/
 
-    var url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
+    var url =
+        'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
     var dio = Dio();
-    Response response=await  dio.get(url);
-    if(response.statusCode==200){
+    Response response = await dio.get(url);
+    if (response.statusCode == 200) {
       setState(() {
-        this._list=jsonDecode(response.data)['result'];
+        this._list = jsonDecode(response.data)['result'];
       });
     }
-
-
-
-
   }
 
   _postDataInfo() async {
@@ -117,7 +128,7 @@ class _DioTestState extends State<DioTest> {
                     ),
                     /*Text(
                         e["list"].length > 0 ? e["list"][0]["title"] : "暂无数据！"),*/
-                   /* ListView.builder(
+                    /* ListView.builder(
                         shrinkWrap: true,
                         physics: new NeverScrollableScrollPhysics(),
                         itemCount: _childList.length,

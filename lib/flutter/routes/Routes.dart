@@ -1,5 +1,6 @@
 import 'package:flutterapp/flutter/pages/DatePickerPage.dart';
 import 'package:flutterapp/flutter/pages/DatePickerTestDemo.dart';
+import 'package:flutterapp/flutter/pages/DioHttpTest.dart';
 import 'package:flutterapp/flutter/pages/DioTest.dart';
 import 'package:flutterapp/flutter/pages/FormPage.dart';
 import 'package:flutterapp/flutter/pages/HttpTest.dart';
@@ -46,6 +47,7 @@ final routes = {
   '/dialogPage': (context) => DialogPage(),
   '/httpTest': (context) => HttpTest(),
   '/dioTest': (context) => DioTest(),
+  '/dioHttpTest': (context) => DioHttpTest(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
 };
 
